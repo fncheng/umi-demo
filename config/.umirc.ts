@@ -29,7 +29,7 @@ export default defineConfig({
   ],
   ignoreMomentLocale: true,
   fastRefresh: {},
-  // mfsu: {},
+  mfsu: {}
   // webpack5: {},
   // exportStatic: {},
 });

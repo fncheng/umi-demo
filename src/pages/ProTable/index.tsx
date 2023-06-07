@@ -19,7 +19,7 @@ const columns: ProColumns<RecordType>[] = [
     defaultSortOrder: 'descend',
   },
   {
-    title: '检测源名称1',
+    title: '检测源名称',
     dataIndex: 'checkName',
     sorter: (a, b) => a.checkName.localeCompare(b.checkName),
   },
