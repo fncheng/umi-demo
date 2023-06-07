@@ -12,7 +12,8 @@ export default function IndexPage() {
         Primary Button
       </Button>
       <div>
-        <Link to="/about">goto about</Link>
+        <Link to="/about">goto about</Link> |
+        <Link to="/protable">goto proTable</Link>
       </div>
     </div>
   );

@@ -12,13 +12,17 @@
     "build": "umi build"
   },
   "dependencies": {
+    "@ant-design/pro-components": "^2.5.5",
     "@umijs/preset-react": "1.x",
-    "umi": "^3.3.6"
+    "antd": "^5.6.0",
+    "umi": "^3.x"
   },
   "devDependencies": {
+    "@types/mockjs": "^1.0.7",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
     "@umijs/plugin-esbuild": "^1.4.2",
+    "mockjs": "^1.0.1-beta3",
     "react": "17.x",
     "react-dom": "17.x",
     "typescript": "^4.1.2"

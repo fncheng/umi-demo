@@ -1,13 +1,13 @@
 // @ts-nocheck
 import React from 'react';
-import initialState from '/project/sandbox/src/.umi/plugin-initial-state/models/initialState';
-import model0 from "/project/sandbox/src/models/count";
+import initialState from '/Users/cheng/Github/umi-demo/src/.umi/plugin-initial-state/models/initialState';
+import model0 from "/Users/cheng/Github/umi-demo/src/models/count";
 // @ts-ignore
-import Dispatcher from '/project/sandbox/node_modules/@umijs/plugin-model/lib/helpers/dispatcher';
+import Dispatcher from '/Users/cheng/Github/umi-demo/node_modules/@umijs/plugin-model/lib/helpers/dispatcher';
 // @ts-ignore
-import Executor from '/project/sandbox/node_modules/@umijs/plugin-model/lib/helpers/executor';
+import Executor from '/Users/cheng/Github/umi-demo/node_modules/@umijs/plugin-model/lib/helpers/executor';
 // @ts-ignore
-import { UmiContext } from '/project/sandbox/node_modules/@umijs/plugin-model/lib/helpers/constant';
+import { UmiContext } from '/Users/cheng/Github/umi-demo/node_modules/@umijs/plugin-model/lib/helpers/constant';
 
 export const models = { '@@initialState': initialState, 'count': model0 };
 

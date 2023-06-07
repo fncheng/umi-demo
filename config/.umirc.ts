@@ -6,6 +6,9 @@ export default defineConfig({
     react: 'React',
     'react-dom': 'ReactDOM',
   },
+  dynamicImport: {
+    loading: '@ant-design/pro-layout/es/PageLoading',
+  },
   scripts:
     process.env.NODE_ENV === 'development'
       ? [
@@ -22,8 +25,11 @@ export default defineConfig({
   routes: [
     { path: '/', component: '@/pages/index' },
     { path: '/about', component: '@/pages/About' },
-    // {path: '/test',}
+    { path: '/protable', component: '@/pages/ProTable' },
   ],
   ignoreMomentLocale: true,
   fastRefresh: {},
+  // mfsu: {},
+  // webpack5: {},
+  // exportStatic: {},
 });

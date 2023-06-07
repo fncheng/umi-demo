@@ -1,6 +1,7 @@
 // Created by Umi Plugin
 
 export interface IConfigFromPlugins {
+"404"?: boolean
 routes?: {
 /**
  * Any valid URL path
@@ -94,6 +95,7 @@ host?: string
 https?: ({
 key?: string
 cert?: string
+http2?: boolean
 [k: string]: any
 } | boolean)
 headers?: {
@@ -112,9 +114,16 @@ dynamicImport?: {
  */
 loading?: string
 }
+/**
+ * Code splitting for import statement syntax
+ */
+dynamicImportSyntax?: {
+
+}
 exportStatic?: {
 htmlSuffix?: boolean
 dynamicRoot?: boolean
+supportWin?: boolean
 /**
  * extra render paths only enable in ssr
  */
@@ -163,6 +172,23 @@ fileName?: string
 publicPath?: ""
 basePath?: string
 writeToFileEmit?: boolean
+}
+/**
+ * open mfsu feature
+ */
+mfsu?: {
+development?: {
+output?: string
+}
+production?: {
+output?: string
+}
+mfName?: string
+exportAllMembers?: {
+
+}
+chunks?: string[]
+ignoreNodeBuiltInModules?: boolean
 }
 mountElementId?: ""
 mpa?: {
@@ -216,6 +242,16 @@ theme?: {
 
 }
 runtimeHistory?: {
+
+}
+webpack5?: {
+lazyCompilation?: {
+entries?: boolean
+imports?: boolean
+test?: any
+}
+}
+workerLoader?: {
 
 }
 favicon?: string

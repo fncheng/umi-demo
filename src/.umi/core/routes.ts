@@ -1,6 +1,6 @@
 // @ts-nocheck
 import React from 'react';
-import { ApplyPluginsType } from '/project/sandbox/node_modules/umi/node_modules/@umijs/runtime';
+import { ApplyPluginsType } from '/Users/cheng/Github/umi-demo/node_modules/umi/node_modules/@umijs/runtime';
 import * as umiExports from './umiExports';
 import { plugin } from './plugin';
 
@@ -10,6 +10,11 @@ export function getRoutes() {
     "path": "/About",
     "exact": true,
     "component": require('@/pages/About/index.tsx').default
+  },
+  {
+    "path": "/ProTable",
+    "exact": true,
+    "component": require('@/pages/ProTable/index.tsx').default
   },
   {
     "path": "/",
