@@ -56,6 +56,7 @@ export default function App() {
   return (
     <div className="App" ref={node}>
       <div style={{ height: '32px' }}>
+        <span>123</span>
         <Button>123</Button>
         <span>{Math.random()}</span>
         <button className="my-ant-btn">123</button>

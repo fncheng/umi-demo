@@ -1,5 +1,5 @@
 // import AsyncComponent from '@/components/AsyncComponent';
-import { lazy, Suspense } from 'react';
+import { lazy, Suspense, useState } from 'react';
 import { Link, useModel } from 'umi';
 // const HelloWorld = lazy(
 //   () => import(/* webpackChunkName: "HelloWorld" */ '@/components/HelloWorld'),
@@ -11,6 +11,22 @@ import {
   ProTable,
 } from '@ant-design/pro-components';
 import { Input } from 'antd';
+import { produce } from 'immer';
+
+enum Gender {
+  '女' = 0,
+  '男' = 1,
+}
+interface User {
+  name?: string;
+  age?: number;
+  gender?: Gender;
+}
+
+const genders = {
+  0: '女',
+  1: '男',
+};
 
 // const AsyncComponent = lazy(() => import('@/components/AsyncComponent'));
 
@@ -19,8 +35,21 @@ const About = () => {
     user: model.user,
     setUser: model.setUser,
   }));
+  const [userState, setUserState] = useState<User>({});
+
+  const handleUser = () => {
+    setUserState(
+      produce((draft) => {
+        draft.gender = Math.floor(Math.random() * 2);
+      }),
+    );
+  };
+
   return (
     <div>
+      <button onClick={handleUser}>gender</button>
+      <span>gender:{Gender[userState?.gender!]}</span>
+      <span>gender:{genders[userState?.gender!]}</span>
       <button onClick={() => setUser(100)}>setUser</button>
       <div>About, goBack </div>
       <Link to="/">home123</Link>
