@@ -1,14 +1,17 @@
 import { defineConfig } from 'umi';
 
 export default defineConfig({
+  devServer: {
+    port: 8003
+  },
   esbuild: {},
   externals: {
     react: 'React',
     'react-dom': 'ReactDOM',
   },
-  dynamicImport: {
-    loading: '@ant-design/pro-layout/es/PageLoading',
-  },
+  // dynamicImport: {
+  //   loading: '@ant-design/pro-layout/es/PageLoading',
+  // },
   scripts:
     process.env.NODE_ENV === 'development'
       ? [
@@ -29,7 +32,7 @@ export default defineConfig({
   ],
   ignoreMomentLocale: true,
   fastRefresh: {},
-  mfsu: {}
+  // mfsu: {}
   // webpack5: {},
   // exportStatic: {},
 });

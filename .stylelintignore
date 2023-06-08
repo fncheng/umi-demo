@@ -1,0 +1,11 @@
+# file
+*.js
+*.jsx
+*.ts
+*.tsx
+*.jpg
+
+# folder
+node_modules
+dist
+config

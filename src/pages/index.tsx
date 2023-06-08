@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'umi';
 import { Button, DatePicker } from 'antd';
 import styles from './index.less';
+import 'antd/dist/reset.css';
 
 export default function IndexPage() {
   return (

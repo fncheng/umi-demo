@@ -3,6 +3,7 @@ import React, { ReactElement, useEffect, useRef, useState } from 'react';
 import { Button, Form, Input, Pagination, Row, Table, Transfer } from 'antd';
 import { ProColumns, ProTable } from '@ant-design/pro-components';
 import { getList } from './service';
+import styles from './style.module.less'
 
 interface RecordType {
   id: number;
@@ -74,7 +75,7 @@ export default function App() {
           };
         }}
       />
-      <div className="pagination-wrapper">
+      <div className={styles.paginationWrapper}>
         <Pagination
           showQuickJumper
           showSizeChanger
