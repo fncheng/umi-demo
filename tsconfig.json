@@ -19,7 +19,6 @@
     "mock/**/*",
     "src/**/*",
     "config/**/*",
-    "config/.umirc.ts",
     "typings.d.ts"
   ],
   "exclude": [

@@ -2,7 +2,7 @@ import { defineConfig } from 'umi';
 
 export default defineConfig({
   devServer: {
-    port: 8003
+    port: 8003,
   },
   esbuild: {},
   externals: {
@@ -32,7 +32,7 @@ export default defineConfig({
   ],
   ignoreMomentLocale: true,
   fastRefresh: {},
-  // mfsu: {}
+  mfsu: {},
   // webpack5: {},
   // exportStatic: {},
 });
