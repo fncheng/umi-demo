@@ -3,7 +3,8 @@ import React, { ReactElement, useEffect, useRef, useState } from 'react';
 import { Button, Form, Input, Pagination, Row, Table, Transfer } from 'antd';
 import { ProColumns, ProTable } from '@ant-design/pro-components';
 import { getList } from './service';
-import styles from './style.module.less'
+import styles from './style.module.less';
+import { getTableScroll } from '@/utils';
 
 interface RecordType {
   id: number;
@@ -47,10 +48,8 @@ export default function App() {
   const node = useRef<HTMLDivElement>(null);
   const [scrollY, setScrollY] = useState('');
   useEffect(() => {
-    const el = node.current?.querySelector('div.ant-table-body');
-    const top = el?.getBoundingClientRect().top;
-    const height = `calc(100vh - ${top}px - 66px)`;
-    setScrollY(height);
+    setScrollY(getTableScroll({ bottomHeight: 66, ref: node }));
+    console.log('123', typeof document.querySelector('.App'));
   }, []);
 
   return (

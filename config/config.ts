@@ -29,6 +29,7 @@ export default defineConfig({
     { path: '/', component: '@/pages/index' },
     { path: '/about', component: '@/pages/About' },
     { path: '/protable', component: '@/pages/ProTable' },
+    { path: '/demo1', component: '@/pages/Demo/demo1' },
   ],
   ignoreMomentLocale: true,
   fastRefresh: {},

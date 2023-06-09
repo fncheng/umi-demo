@@ -20,6 +20,11 @@ export function getRoutes() {
     "path": "/protable",
     "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__ProTable' */'@/pages/ProTable')}),
     "exact": true
+  },
+  {
+    "path": "/demo1",
+    "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__Demo__demo1' */'@/pages/Demo/demo1')}),
+    "exact": true
   }
 ];
 
