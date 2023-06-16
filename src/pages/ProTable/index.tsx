@@ -1,5 +1,11 @@
 import produce from 'immer';
-import React, { ReactElement, useEffect, useRef, useState } from 'react';
+import React, {
+  PropsWithChildren,
+  ReactElement,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 import { Button, Form, Input, Pagination, Row, Table, Transfer } from 'antd';
 import { ProColumns, ProTable } from '@ant-design/pro-components';
 import { getList } from './service';
@@ -7,10 +13,19 @@ import styles from './style.module.less';
 import { getTableScroll } from '@/utils';
 
 interface RecordType {
-  id: number;
-  checkName: string;
-  ip: string;
-  number: number;
+  id?: number;
+  checkName?: string;
+  ip?: string;
+  type?: 0 | 1;
+}
+
+const checkType = {
+  0: '开启',
+  1: '关闭',
+};
+
+const obj:RecordType = {
+  type: 1
 }
 
 const columns: ProColumns<RecordType>[] = [
@@ -48,14 +63,14 @@ export default function App() {
   const node = useRef<HTMLDivElement>(null);
   const [scrollY, setScrollY] = useState('');
   useEffect(() => {
-    setScrollY(getTableScroll({ bottomHeight: 66, ref: node }));
+    setScrollY(getTableScroll({ extraHeight: 66, ref: node }));
     console.log('123', typeof document.querySelector('.App'));
   }, []);
 
   return (
     <div className="App" ref={node}>
       <div style={{ height: '32px' }}>
-        <span>123</span>
+        <span>{checkType[obj.type!]}</span>
         <Button>123</Button>
         <span>{Math.random()}</span>
         <button className="my-ant-btn">123</button>

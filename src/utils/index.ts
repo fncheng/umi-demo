@@ -2,6 +2,12 @@ import { RefObject } from 'react';
 
 /**
  * 给ProTable的body部分设置滚动条
+ * 
+ * @example
+ * const ref = useRef(null);
+ * <Table ref={ref} />
+ * const scrollY = getTableScrollY({ ref });
+ * 
  * @param {number} options.extraHeight 表格body底部到可视区域的距离（默认为 70）
  * @param {RefObject} options.ref  ProTable组件ref
  * @returns {string} 返回表格的垂直滚动高度
