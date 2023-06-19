@@ -9,10 +9,11 @@ import {
   ProFormDependency,
   ProFormDigit,
   ProFormSelect,
+  ProFormSwitch,
   ProFormText,
   ProTable,
 } from '@ant-design/pro-components';
-import { Card, Col, Input, Row, Select, Form, Button } from 'antd';
+import { Card, Col, Input, Row, Select, Form, Button, Switch } from 'antd';
 import { produce } from 'immer';
 import { Rule } from 'antd/es/form';
 
@@ -64,6 +65,7 @@ const About: React.FC = () => {
       }),
     );
   };
+  const [status, setStatus] = useState(true);
   console.log('render');
 
   return (
@@ -205,6 +207,12 @@ const About: React.FC = () => {
             </Form.Item>
           </Form>
         </Col>
+      </Row>
+      <Row>
+        <Switch checked={status}></Switch>
+        <ProForm>
+          <ProFormSwitch name={'status'}></ProFormSwitch>
+        </ProForm>
       </Row>
     </div>
   );

@@ -25,6 +25,21 @@ export function getRoutes() {
     "path": "/demo1",
     "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__Demo__demo1' */'@/pages/Demo/demo1')}),
     "exact": true
+  },
+  {
+    "path": "/demo2",
+    "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__demo2' */'@/pages/demo2')}),
+    "exact": true
+  },
+  {
+    "path": "/demo3",
+    "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__demo3' */'@/pages/demo3')}),
+    "exact": true
+  },
+  {
+    "path": "/demo4",
+    "component": dynamic({ loader: () => import(/* webpackChunkName: 'p__demo4' */'@/pages/demo4')}),
+    "exact": true
   }
 ];
 
